@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { FaqsOtherChannelsComponent } from './faqs-other-channels.component';
 
@@ -6,11 +6,13 @@ describe('FaqsOtherChannelsComponent', () => {
   let component: FaqsOtherChannelsComponent;
   let fixture: ComponentFixture<FaqsOtherChannelsComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [FaqsOtherChannelsComponent]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [FaqsOtherChannelsComponent]
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(FaqsOtherChannelsComponent);

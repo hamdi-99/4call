@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { FormRegisterCompanyComponent } from './form-register-company.component';
 
@@ -6,11 +6,13 @@ describe('FormRegisterCompanyComponent', () => {
   let component: FormRegisterCompanyComponent;
   let fixture: ComponentFixture<FormRegisterCompanyComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [FormRegisterCompanyComponent]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [FormRegisterCompanyComponent]
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(FormRegisterCompanyComponent);

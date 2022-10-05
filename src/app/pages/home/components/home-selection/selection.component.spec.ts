@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { HomeSelectionComponent } from './home-selection.component';
 
@@ -6,11 +6,13 @@ describe('HomeSelectionComponent', () => {
   let component: HomeSelectionComponent;
   let fixture: ComponentFixture<HomeSelectionComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [HomeSelectionComponent]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [HomeSelectionComponent]
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(HomeSelectionComponent);

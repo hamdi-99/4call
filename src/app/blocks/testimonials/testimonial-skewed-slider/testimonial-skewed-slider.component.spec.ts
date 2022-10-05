@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { TestimonialSkewedSliderComponent } from './testimonial-skewed-slider.component';
 
@@ -6,11 +6,13 @@ describe('TestimonialSkewedSliderComponent', () => {
   let component: TestimonialSkewedSliderComponent;
   let fixture: ComponentFixture<TestimonialSkewedSliderComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [TestimonialSkewedSliderComponent]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [TestimonialSkewedSliderComponent]
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TestimonialSkewedSliderComponent);

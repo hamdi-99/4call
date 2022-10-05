@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { SliderDeveloperToolsComponent } from './slider-developer-tools.component';
 
@@ -6,11 +6,13 @@ describe('SliderDeveloperToolsComponent', () => {
   let component: SliderDeveloperToolsComponent;
   let fixture: ComponentFixture<SliderDeveloperToolsComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [SliderDeveloperToolsComponent]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SliderDeveloperToolsComponent]
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SliderDeveloperToolsComponent);

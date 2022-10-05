@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { SaasLightweightTemplateComponent } from './saas-lightweight-template.component';
 
@@ -6,11 +6,13 @@ describe('SaasLightweightTemplateComponent', () => {
   let component: SaasLightweightTemplateComponent;
   let fixture: ComponentFixture<SaasLightweightTemplateComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [SaasLightweightTemplateComponent]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SaasLightweightTemplateComponent]
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SaasLightweightTemplateComponent);

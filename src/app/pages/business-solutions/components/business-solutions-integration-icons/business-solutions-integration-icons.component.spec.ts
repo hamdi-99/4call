@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { BusinessSolutionsIntegrationIconsComponent } from './business-solutions-integration-icons.component';
 
@@ -6,11 +6,13 @@ describe('BusinessSolutionsIntegrationIconsComponent', () => {
   let component: BusinessSolutionsIntegrationIconsComponent;
   let fixture: ComponentFixture<BusinessSolutionsIntegrationIconsComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [BusinessSolutionsIntegrationIconsComponent]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [BusinessSolutionsIntegrationIconsComponent]
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(

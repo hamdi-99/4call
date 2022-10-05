@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { NavbarDefaultComponent } from './navbar-default.component';
 
@@ -6,11 +6,13 @@ describe('NavbarDefaultComponent', () => {
   let component: NavbarDefaultComponent;
   let fixture: ComponentFixture<NavbarDefaultComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [NavbarDefaultComponent]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [NavbarDefaultComponent]
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(NavbarDefaultComponent);

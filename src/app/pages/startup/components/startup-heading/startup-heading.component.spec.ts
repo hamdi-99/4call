@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { StartupHeadingComponent } from './startup-heading.component';
 
@@ -6,11 +6,13 @@ describe('StartupHeadingComponent', () => {
   let component: StartupHeadingComponent;
   let fixture: ComponentFixture<StartupHeadingComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [StartupHeadingComponent]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [StartupHeadingComponent]
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(StartupHeadingComponent);

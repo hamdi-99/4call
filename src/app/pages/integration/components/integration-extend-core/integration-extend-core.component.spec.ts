@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { IntegrationExtendCoreComponent } from './integration-extend-core.component';
 
@@ -6,11 +6,13 @@ describe('IntegrationExtendCoreComponent', () => {
   let component: IntegrationExtendCoreComponent;
   let fixture: ComponentFixture<IntegrationExtendCoreComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [IntegrationExtendCoreComponent]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [IntegrationExtendCoreComponent]
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(IntegrationExtendCoreComponent);

@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { DividerCurveComponent } from './divider-curve.component';
 
@@ -6,11 +6,13 @@ describe('DividerCurveComponent', () => {
   let component: DividerCurveComponent;
   let fixture: ComponentFixture<DividerCurveComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [DividerCurveComponent]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [DividerCurveComponent]
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(DividerCurveComponent);

@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { SliderFeaturesFluidColsComponent } from './slider-features-fluid-cols.component';
 
@@ -6,11 +6,13 @@ describe('SliderFeaturesFluidColsComponent', () => {
   let component: SliderFeaturesFluidColsComponent;
   let fixture: ComponentFixture<SliderFeaturesFluidColsComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [SliderFeaturesFluidColsComponent]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SliderFeaturesFluidColsComponent]
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SliderFeaturesFluidColsComponent);

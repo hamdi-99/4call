@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { SmartBusinessDeserveBetterComponent } from './smart-business-deserve-better.component';
 
@@ -6,11 +6,13 @@ describe('SmartBusinessDeserveBetterComponent', () => {
   let component: SmartBusinessDeserveBetterComponent;
   let fixture: ComponentFixture<SmartBusinessDeserveBetterComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [SmartBusinessDeserveBetterComponent]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SmartBusinessDeserveBetterComponent]
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SmartBusinessDeserveBetterComponent);

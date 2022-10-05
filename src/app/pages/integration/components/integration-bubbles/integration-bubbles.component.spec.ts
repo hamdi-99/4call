@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { IntegrationBubblesComponent } from './integration-bubbles.component';
 
@@ -6,11 +6,13 @@ describe('IntegrationBubblesComponent', () => {
   let component: IntegrationBubblesComponent;
   let fixture: ComponentFixture<IntegrationBubblesComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [IntegrationBubblesComponent]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [IntegrationBubblesComponent]
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(IntegrationBubblesComponent);
