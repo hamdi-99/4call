@@ -43,6 +43,7 @@
     "lodash": "^4.17.15",
     "lodash-es": "^4.17.15",
     "module": "^1.1.0",
+    "ng-bootstrap": "^1.6.3",
     "ngx-smart-modal": "^7.2.1",
     "ngx-swiper-wrapper": "^10.0.0",
     "ngx-typed-js": "^1.1.0",
