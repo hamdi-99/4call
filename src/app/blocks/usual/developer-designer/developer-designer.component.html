@@ -4,13 +4,22 @@
     <div class="shadow bg-contrast p-5 rounded">
       <div class="row gap-y align-items-center text-center text-lg-left">
         <div class="col-12 col-md-6 py-4 px-5 b-md-r">
-          <dc-feather [name]="'star'" [iconClass]="'stroke-primary'"></dc-feather>
-          <a href="javascript:;" class="mt-4 text-primary d-flex align-items-center">
-            <h4 class="mr-3">Avez vous un projet en tête ? Envoyez-Nous Simplement Un Message.</h4>
+          <dc-feather
+            [name]="'star'"
+            [iconClass]="'stroke-primary'"
+          ></dc-feather>
+          <a
+            href="javascript:;"
+            class="mt-4 text-primary d-flex align-items-center"
+          >
+            <h4 class="mr-3">
+              Avez vous un projet en tête ? Envoyez-Nous Simplement Un Message.
+            </h4>
           </a>
           <p class="mt-4">
-            Si vous vous retrouvez à faire la même routine jour après jour, ne vous souvenez jamais de ce que vous avez
-            fait la veille, n’avez rien à espérer, vivez votre vie !
+            Si vous vous retrouvez à faire la même routine jour après jour, ne
+            vous souvenez jamais de ce que vous avez fait la veille, n’avez rien
+            à espérer, vivez votre vie !
           </p>
         </div>
 
@@ -19,17 +28,58 @@
             <div class="container">
               <div class="col-md-12">
                 <div class="form-area">
-                  <form role="form"><br style="clear: both;">
-                    <div class="form-group"><input id="name" class="form-control" name="name" required="" type="text"
-                        placeholder="Prénom, Nom ou Société"></div>
-                    <div class="form-group"><input id="email" class="form-control" name="email" required="" type="email"
-                        placeholder="Addresse de messagerie"></div>
-                    <div class="form-group"><input id="mobile" class="form-control" name="mobile" required=""
-                        type="phone" placeholder="Numéro de téléphone"></div>
-                    <div class="form-group"><textarea id="message" class="form-control" maxlength="140" name="message"
-                        rows="7" placeholder="Message"></textarea></div>
-                    <button id="submit" class="btn btn-primary pull-right" name="submit" type="button">Envoyer le
-                      message
+                  <form role="form">
+                    <br style="clear: both;" />
+                    <div class="form-group">
+                      <input
+                        id="name"
+                        class="form-control"
+                        name="name"
+                        required=""
+                        type="text"
+                        placeholder="Prénom, Nom ou Société"
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <input
+                        id="email"
+                        class="form-control"
+                        name="email"
+                        required=""
+                        type="email"
+                        placeholder="Addresse de messagerie"
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <input
+                        id="mobile"
+                        class="form-control"
+                        name="mobile"
+                        required=""
+                        type="phone"
+                        placeholder="Numéro de téléphone"
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <textarea
+                        id="message"
+                        class="form-control"
+                        maxlength="140"
+                        name="message"
+                        rows="7"
+                        placeholder="Message"
+                      ></textarea>
+                    </div>
+                    <button
+                      id="submit"
+                      class="btn btn-primary pull-right"
+                      name="submit"
+                      type="button"
+                    >
+                      Envoyer le message
                     </button>
                   </form>
                 </div>

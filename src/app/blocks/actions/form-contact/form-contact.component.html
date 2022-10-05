@@ -4,9 +4,20 @@
   data-response-message-animation="slide-in-up"
 >
   <div class="form-group">
-    <label for="contact_email" class="bold mb-0">Email address</label>
+    <label for="name" class="bold mb-0">Nom </label>
+    <input
+      type="name"
+      name="name"
+      id="name"
+      class="form-control bg-contrast"
+      placeholder="Prénom, Nom ou Société"
+      required
+    />
+  </div>
+  <div class="form-group">
+    <label for="contact_email" class="bold mb-0">Addresse éléctronique </label>
     <small id="emailHelp" class="form-text text-secondary mt-0 mb-2 italic"
-      >We'll never share your email with anyone else.</small
+      >On ne partage jamais vos addresse avec d'autres tiers.</small
     >
     <input
       type="email"
@@ -19,11 +30,11 @@
   </div>
 
   <div class="form-group">
-    <label for="contact_email" class="bold">Subject</label>
+    <label for="phone" class="bold">Numéro de téléphone</label>
     <input
       type="text"
-      name="subject"
-      id="contact_subject"
+      name="phone"
+      id="phone"
       class="form-control bg-contrast"
       placeholder="Subject"
       required
@@ -49,7 +60,7 @@
       type="submit"
       class="btn btn-primary btn-rounded"
     >
-      Send Message
+      Envoyer le message
     </button>
   </div>
 </form>
@@ -57,9 +68,9 @@
 <div class="response-message">
   <div class="section-heading">
     <i class="fas fa-check font-lg"></i>
-    <p class="font-md m-0">Thank you!</p>
+    <p class="font-md m-0">Merci!</p>
     <p class="response">
-      Your message has been send, we will contact you as soon as possible.
+      Votre message est envoyé, on vous contactera dès que possible.
     </p>
   </div>
 </div>

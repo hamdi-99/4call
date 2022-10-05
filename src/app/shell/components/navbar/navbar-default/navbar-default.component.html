@@ -1,4 +1,7 @@
-<dc-navbar-shell [darkLinks]="darkLinks" [useOnlyDarkLogo]="darkLinks ? true : useOnlyDarkLogo">
+<dc-navbar-shell
+  [darkLinks]="darkLinks"
+  [useOnlyDarkLogo]="darkLinks ? true : useOnlyDarkLogo"
+>
   <ul class="nav navbar-nav" [class.ml-auto]="isRightPositioned()">
     <li class="nav-item">
       <a class="nav-link" [routerLink]="['/startup']">Acceuil</a>
@@ -73,10 +76,15 @@
     </li>-->
   </ul>
 
-  <nav class="nav navbar-nav justify-content-center mt-4 mt-md-0 flex-row"
-    [ngClass]="{ 'ml-md-auto': !isRightPositioned() }">
+  <nav
+    class="nav navbar-nav justify-content-center mt-4 mt-md-0 flex-row"
+    [ngClass]="{ 'ml-md-auto': !isRightPositioned() }"
+  >
     <a class="btn btn-rounded btn-outline mr-3 px-3">
-      <fa-icon [icon]="mobile" class="d-none d-md-inline mr-md-0 mr-lg-2"></fa-icon>
+      <fa-icon
+        [icon]="mobile"
+        class="d-none d-md-inline mr-md-0 mr-lg-2"
+      ></fa-icon>
       <span class="d-md-none d-lg-inline">0988194174</span>
     </a>
     <!--<a class="btn btn-rounded btn-outline mr-3 px-3" [routerLink]="['/auth/login']">

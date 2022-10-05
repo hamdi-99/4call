@@ -1,5 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { faSignInAlt, faUserPlus, faMobileAlt, faBlenderPhone } from '@fortawesome/free-solid-svg-icons';
+import {
+  faSignInAlt,
+  faUserPlus,
+  faMobileAlt,
+  faBlenderPhone
+} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'dc-navbar-default',
