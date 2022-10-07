@@ -138,7 +138,8 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes, {
       preloadingStrategy: PreloadAllModules,
-      relativeLinkResolution: 'legacy'
+      relativeLinkResolution: 'legacy',
+      scrollPositionRestoration: 'enabled'
     })
   ],
   exports: [RouterModule],
