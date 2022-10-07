@@ -15,14 +15,14 @@
         <h6 class="py-2 bold">Information</h6>
 
         <nav class="nav flex-column">
-          <a class="nav-item py-2" [routerLink]="['/about']"
+          <a class="nav-item py-2" [routerLink]="['/legals']"
             >Mentions Legales</a
           >
-          <a class="nav-item py-2" href="#">Politique de confidentialité</a>
-          <a class="nav-item py-2" [routerLink]="['/blog-grid']">CGU</a>
-          <a class="nav-item py-2" [routerLink]="['/blog-grid']"
-            >4PAYMENT Innovation</a
+          <a class="nav-item py-2" [routerLink]="['/terms']"
+            >Politique de confidentialité</a
           >
+          <a class="nav-item py-2" [routerLink]="['/blog-grid']">CGU</a>
+          <a class="nav-item py-2" href="#">4PAYMENT Innovation</a>
         </nav>
       </div>
 
@@ -30,9 +30,9 @@
         <h6 class="py-2 bold">Naviguer</h6>
 
         <nav class="nav flex-column">
-          <a class="nav-item py-2" href="#">Acceuil</a>
-          <a class="nav-item py-2" href="#">Solution</a>
-          <a class="nav-item py-2" href="#">Contact</a>
+          <a class="nav-item py-2" [routerLink]="['/startup']">Acceuil</a>
+          <a class="nav-item py-2" href="/startup#services">Solution</a>
+          <a class="nav-item py-2" [routerLink]="['/contact']">Contact</a>
           <a class="nav-item py-2" href="#">Devis</a>
         </nav>
       </div>

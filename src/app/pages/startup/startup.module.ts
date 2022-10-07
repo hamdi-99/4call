@@ -5,7 +5,7 @@ import { CtaModule } from '@app/blocks/cta/cta.module';
 import { UsualModule } from '@app/blocks/usual/usual.module';
 import { FootersModule } from '@app/blocks/footers/footers.module';
 import { ModalsModule } from '@app/blocks/modals/modals.module';
-import { NgbTabsetModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { StartupRoutingModule } from './startup-routing.module';
 import { StartupComponent } from './components/startup/startup.component';
@@ -30,7 +30,7 @@ import { BubblesService } from './services/bubbles.service';
     CtaModule,
     UsualModule,
     FootersModule,
-    NgbTabsetModule,
+    NgbNavModule,
     ModalsModule,
     StartupRoutingModule
   ]

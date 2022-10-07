@@ -8,6 +8,7 @@ import { SharedModule } from '@app/shared';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeModule } from './pages/home/home.module';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   imports: [
@@ -20,7 +21,7 @@ import { HomeModule } from './pages/home/home.module';
     AppRoutingModule // must be imported as the last module as it contains the fallback route
   ],
   declarations: [AppComponent],
-  providers: [],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

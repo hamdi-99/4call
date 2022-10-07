@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./startup-why-dashcore.component.scss']
 })
 export class StartupWhyDashcoreComponent implements OnInit {
+  active = 1;
   constructor() {}
 
   ngOnInit() {}

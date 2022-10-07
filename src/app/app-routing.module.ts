@@ -1,9 +1,22 @@
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { Shell } from '@app/shell/services/shell.service';
+import { StartupComponent } from './pages/startup/components/startup/startup.component';
 
 const routes: Routes = [
   Shell.childRoutes([
+    { path: '', component: StartupComponent },
+    {
+      path: 'legals',
+      loadChildren: () =>
+        import('./pages/legals/legals.module').then(m => m.LegalsModule)
+    },
+    {
+      path: 'devis',
+      loadChildren: () =>
+        import('./pages/devis/devis.module').then(m => m.DevisModule)
+    },
     {
       path: 'about',
       loadChildren: () =>
@@ -75,6 +88,11 @@ const routes: Routes = [
       path: 'startup',
       loadChildren: () =>
         import('./pages/startup/startup.module').then(m => m.StartupModule)
+    },
+    {
+      path: 'terms',
+      loadChildren: () =>
+        import('./pages/terms/terms.module').then(m => m.TermsModule)
     }
   ]),
 
@@ -104,11 +122,7 @@ const routes: Routes = [
         m => m.SmartBusinessModule
       )
   },
-  {
-    path: 'terms',
-    loadChildren: () =>
-      import('./pages/terms/terms.module').then(m => m.TermsModule)
-  },
+
   {
     path: 'social',
     loadChildren: () =>
@@ -121,6 +135,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
+    BrowserModule,
     RouterModule.forRoot(routes, {
       preloadingStrategy: PreloadAllModules,
       relativeLinkResolution: 'legacy'
